@@ -18,7 +18,10 @@ export class serverComponent{
   status : string = 'active'
   allowButton = false;
   serverCreatedText = 'isnt server yet';
-  serverName = '';
+  serverName = 'center';
+  
+  
+  
   constructor(){
     setTimeout(()=>{
          this.allowButton=true;  
@@ -26,7 +29,7 @@ export class serverComponent{
   }
 
   onCreatedServer(){
-    this.serverCreatedText='server is add';
+    this.serverCreatedText=`server ${this.serverName} is added`;
   }
   onUpdateServerName(event : any){
    // console.log(event);
